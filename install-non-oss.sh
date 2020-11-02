@@ -26,13 +26,24 @@ mvn install:install-file -Dfile=iControl-12.1.0.jar     -DgroupId=com.cloud.com.
 # Vmware dependency - EULA
 # From https://my.vmware.com/group/vmware/get-download?downloadGroup=VSP510-WEBSDK-510
 # Version: 5.1, Release-date: 2012-09-10, Build: 774886
-mvn install:install-file -Dfile=vim25_51.jar        -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25    -Dversion=5.1   -Dpackaging=jar
-mvn install:install-file -Dfile=vim25_55.jar        -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25    -Dversion=5.5   -Dpackaging=jar
-mvn install:install-file -Dfile=vim25_60.jar        -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25    -Dversion=6.0   -Dpackaging=jar
-mvn install:install-file -Dfile=vim25_65.jar        -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25    -Dversion=6.5   -Dpackaging=jar
-mvn install:install-file -Dfile=vim25_67.jar        -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25    -Dversion=6.7   -Dpackaging=jar
+mvn install:install-file -Dfile=vim25_51.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=5.1   -Dpackaging=jar
+mvn install:install-file -Dfile=vim25_55.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=5.5   -Dpackaging=jar
+mvn install:install-file -Dfile=vim25_60.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=6.0   -Dpackaging=jar
+mvn install:install-file -Dfile=vim25_65.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=6.5   -Dpackaging=jar
+# https://my.vmware.com/group/vmware/get-download?downloadGroup=VS-MGMT-SDK67U3
+mvn install:install-file -Dfile=vim25_67.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=6.7   -Dpackaging=jar
+mvn install:install-file -Dfile=pbm_67.jar    -DgroupId=com.cloud.com.vmware -DartifactId=vmware-pbm     -Dversion=6.7   -Dpackaging=jar
+# https://my.vmware.com/group/vmware/downloads/get-download?downloadGroup=VS-MGMT-SDK700
+mvn install:install-file -Dfile=vim25_70.jar  -DgroupId=com.cloud.com.vmware -DartifactId=vmware-vim25   -Dversion=7.0   -Dpackaging=jar
+mvn install:install-file -Dfile=pbm_70.jar    -DgroupId=com.cloud.com.vmware -DartifactId=vmware-pbm     -Dversion=7.0   -Dpackaging=jar
 
 # From http://support.netapp.com/  (not available online, contact your support representative)
 # Version: 4.0 (http://community.netapp.com/t5/Developer-Network-Articles-and-Resources/NetApp-Manageability-NM-SDK-Introduction-and-Download-Information/ta-p/86418)
 if [ -e cloud-manageontap.jar ]; then mv cloud-manageontap.jar manageontap.jar;  fi
 mvn install:install-file -Dfile=manageontap.jar     -DgroupId=com.cloud.com.netapp -DartifactId=manageontap     -Dversion=4.0   -Dpackaging=jar
+
+# From https://github.com/vmware/vsphere-automation-sdk-java/tree/master/lib
+mvn install:install-file -Dfile=vapi-runtime-2.15.0.jar -DgroupId=com.vmware.vapi -DartifactId=vapi-runtime -Dversion=2.15.0 -Dpackaging=jar
+mvn install:install-file -Dfile=vapi-authentication-2.15.0.jar -DgroupId=com.vmware.vapi -DartifactId=vapi-authentication -Dversion=2.15.0 -Dpackaging=jar
+mvn install:install-file -Dfile=vsphereautomation-client-sdk-3.3.0.jar -DgroupId=com.vmware.vsphereautomation.client -DartifactId=vsphereautomation-client-sdk -Dversion=3.3.0 -Dpackaging=jar
+
